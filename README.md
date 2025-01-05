@@ -1,4 +1,5 @@
 # Ultimate Astro - Modern Multi-Framework Showcase
+![astro-template-5](https://github.com/user-attachments/assets/19ceca2e-af6f-498a-b1e1-00f36718fc48)
 
 <div display="flex" align="center">
 
@@ -12,7 +13,9 @@
 
 </div>
 
-A modern, interactive showcase of multiple frontend frameworks (React, Svelte) working seamlessly together within Astro. This project demonstrates the power of Astro's multi-framework capabilities while maintaining excellent performance and developer experience.
+# 🌟 Preconfigured for Your Convenience!
+
+This project comes **fully preconfigured** to help you get started. It allows you to create and test components in **multiple frameworks** like React, Svelte, Solid, and Vue, all within the powerful **Astro ecosystem**. 
 
 ## ✨ Features
 
@@ -89,9 +92,3 @@ Contributions, issues, and feature requests are welcome!
 - Telegram: [@TheCr1nge](https://t.me/TheCr1nge)
 
 ---
-
-<div align="center">
-
-[![Built with Astro](https://astro.badg.es/v2/built-with-astro/medium.svg)](https://astro.build)
-
-</div>
