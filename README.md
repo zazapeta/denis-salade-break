@@ -13,6 +13,12 @@
 
 </div>
 
+### 📊 PageSpeed Insights Report
+
+
+
+[View Full Report](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
+
 # 🌟 Preconfigured for Your Convenience!
 
 This project comes **fully preconfigured** to help you get started. It allows you to create and test components in **multiple frameworks** like React, Svelte, Solid, and Vue, all within the powerful **Astro ecosystem**. 
