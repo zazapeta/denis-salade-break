@@ -36,12 +36,12 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
 
    **Or Fork and Install**
 
-   1. Click the 'Fork' button in the top right corner of this repository
-   2. Clone your forked repository
+   1.1 Click the 'Fork' button in the top right corner of this repository
+   1.2 Clone your forked repository
    ```bash
     git clone https://github.com/YOUR_USERNAME/UltimateAstroTemplate.git
    ```
-   3. Navigate and install dependencies
+   1.3 Navigate and install dependencies
    ```bash
     cd UltimateAstroTemplate && npm install
    ```
@@ -91,6 +91,8 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
 | 🏗️ Best Practices | 100/100 |
 | 🔍 SEO | 100/100 |
 
+[View Full Report](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
+
 </div>
 
 ## 🛠️ Customization
@@ -110,7 +112,7 @@ Modify `tailwind.config.cjs` to customize:
 
 ## 🎨 Share Your Creation
 
-Have you modified my template? I'd love to see it! Share your creation with us:
+Have you modified my template? I'd love to see it! Share your creation with me:
 
 - Create a [GitHub issue](https://github.com/Marve10s/UltimateAstroTemplate/issues) with screenshots and demo link
 - Message me on [Telegram](https://t.me/TheCr1nge) with your project details
