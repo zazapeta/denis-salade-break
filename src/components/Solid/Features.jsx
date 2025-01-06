@@ -2,12 +2,45 @@ import { createSignal, createEffect, Show } from 'solid-js';
 
 const Features = () => {
   const [activeTab, setActiveTab] = createSignal('playground');
-  const [code, setCode] = createSignal(`<div class="text-center">
-  <h2 class="text-2xl text-gradient">Hello, Solid!</h2>
-  <p class="text-gray-400 mt-2">Edit me to see live changes</p>
+  const [code, setCode] = createSignal(`<div class="max-w-md mx-auto p-4">
+  <header class="text-center mb-4">
+    <h1 class="text-2xl font-bold text-gradient">Welcome to Coding!</h1>
+    <p class="text-gray-400 text-sm">Edit this code to see live changes</p>
+  </header>
+
+  <div class="bg-gray-800 rounded-lg p-4 mb-4">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 bg-gradient-to-r from-[#00DC82] to-[#36E4DA] rounded-full flex items-center justify-center">
+        <span class="text-white text-lg">🚀</span>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-white">Interactive Demo</h2>
+        <p class="text-gray-400 text-sm">Try editing this code!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-2 mb-4">
+    <div class="flex items-center text-green-400 text-sm">
+      <span class="mr-1">✓</span> Responsive
+    </div>
+    <div class="flex items-center text-green-400 text-sm">
+      <span class="mr-1">✓</span> Modern UI
+    </div>
+    <div class="flex items-center text-green-400 text-sm">
+      <span class="mr-1">✓</span> Live Preview
+    </div>
+    <div class="flex items-center text-green-400 text-sm">
+      <span class="mr-1">✓</span> Easy to Edit
+    </div>
+  </div>
+
+  <button class="w-full py-2 px-4 bg-gradient-to-r from-[#00DC82] to-[#36E4DA] text-white rounded-lg hover:opacity-90 transition-opacity">
+    Click Me!
+  </button>
 </div>`);
   const [error, setError] = createSignal(null);
-  const [theme, setTheme] = createSignal('light');
+  const [theme, setTheme] = createSignal('dark');
   const [previewCount, setPreviewCount] = createSignal(0);
   const [selectedColor, setSelectedColor] = createSignal('#00DC82');
 
@@ -21,14 +54,91 @@ const Features = () => {
     }
   };
 
+  const defaultExample = () => {
+    const template = `<div class="max-w-md mx-auto p-4">
+  <header class="text-center mb-4">
+    <h1 class="text-2xl font-bold text-gradient">Welcome to Coding!</h1>
+    <p class="text-gray-400 text-sm">Edit this code to see live changes</p>
+  </header>
+
+  <div class="bg-gray-800 rounded-lg p-4 mb-4">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 bg-gradient-to-r from-[#00DC82] to-[#36E4DA] rounded-full flex items-center justify-center">
+        <span class="text-white text-lg">🚀</span>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-white">Interactive Demo</h2>
+        <p class="text-gray-400 text-sm">Try editing this code!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-2 mb-4">
+    <div class="flex items-center text-green-400 text-sm">
+      <span class="mr-1">✓</span> Responsive
+    </div>
+    <div class="flex items-center text-green-400 text-sm">
+      <span class="mr-1">✓</span> Modern UI
+    </div>
+    <div class="flex items-center text-green-400 text-sm">
+      <span class="mr-1">✓</span> Live Preview
+    </div>
+    <div class="flex items-center text-green-400 text-sm">
+      <span class="mr-1">✓</span> Easy to Edit
+    </div>
+  </div>
+
+  <button class="w-full py-2 px-4 bg-gradient-to-r from-[#00DC82] to-[#36E4DA] text-white rounded-lg hover:opacity-90 transition-opacity">
+    Click Me!
+  </button>
+</div>`;
+    setCode(template);
+  };
+
   const counterExample = () => {
     const template = `
-    <div class="text-center space-y-4">
-      <h2 class="text-2xl text-gradient">Interactive Counter</h2>
-      <div class="flex justify-center items-center space-x-4">
-        <button id="decrement" class="px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700">-</button>
-        <span class="text-2xl p-2 font-bold">${previewCount()}</span>
-        <button id="increment" class="px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700">+</button>
+    <div class="max-w-md mx-auto p-4">
+      <div class="text-center mb-4">
+        <h2 class="text-2xl font-bold text-gradient">Interactive Counter</h2>
+        <p class="text-gray-400 text-sm">Watch the number bounce!</p>
+      </div>
+      
+      <div class="bg-gray-800 rounded-xl p-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#00DC82]/10 to-[#36E4DA]/10"></div>
+        
+        <div class="relative">
+          <div class="flex justify-center mb-6">
+            <div class="counter-number text-5xl font-bold text-white transition-all duration-300 transform hover:scale-110" style="text-shadow: 0 0 20px rgba(0, 220, 130, 0.5)">
+              ${previewCount()}
+            </div>
+          </div>
+          
+          <div class="flex justify-center items-center space-x-4">
+            <button id="decrement" class="group relative px-6 py-3 rounded-lg bg-gray-900 text-white overflow-hidden transition-all duration-300 hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-r from-[#00DC82] to-[#36E4DA] opacity-0 group-hover:opacity-20 transition-opacity"></div>
+              <div class="relative flex items-center">
+                <svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                </svg>
+              </div>
+            </button>
+            
+            <button id="increment" class="group relative px-6 py-3 rounded-lg bg-gray-900 text-white overflow-hidden transition-all duration-300 hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-r from-[#00DC82] to-[#36E4DA] opacity-0 group-hover:opacity-20 transition-opacity"></div>
+              <div class="relative flex items-center">
+                <svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-4 text-center">
+        <p class="text-sm text-gray-400">
+          Click the buttons to see smooth animations!
+        </p>
       </div>
     </div>`;
     setCode(template);
@@ -65,8 +175,9 @@ const Features = () => {
         -webkit-text-fill-color: transparent;
       }
       .preview-area {
-        min-height: 200px;
-        transition: all 0.3s ease;
+        height: 300px;
+        overflow-y: auto;
+        transition: background-color 0.3s ease;
       }
       .preview-area.light {
         background: #ffffff;
@@ -83,6 +194,13 @@ const Features = () => {
       .color-block:hover {
         transform: scale(1.05);
       }
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .counter-change {
+        animation: bounce 0.5s ease;
+      }
     `;
     document.head.appendChild(style);
   });
@@ -93,18 +211,35 @@ const Features = () => {
     if (!preview) return;
 
     const handleClick = (e) => {
+      const target = e.target.closest('button');
+      if (!target) return;
+
       // Handle counter buttons
-      if (e.target.id === 'increment') {
+      if (target.id === 'increment' || target.matches('#increment *')) {
         setPreviewCount(c => c + 1);
         counterExample();
-      } else if (e.target.id === 'decrement') {
+        // Add animation class
+        const numberElement = document.querySelector('.counter-number');
+        if (numberElement) {
+          numberElement.classList.remove('counter-change');
+          void numberElement.offsetWidth; // Trigger reflow
+          numberElement.classList.add('counter-change');
+        }
+      } else if (target.id === 'decrement' || target.matches('#decrement *')) {
         setPreviewCount(c => c - 1);
         counterExample();
+        // Add animation class
+        const numberElement = document.querySelector('.counter-number');
+        if (numberElement) {
+          numberElement.classList.remove('counter-change');
+          void numberElement.offsetWidth; // Trigger reflow
+          numberElement.classList.add('counter-change');
+        }
       }
 
       // Handle color palette
-      if (e.target.classList.contains('color-block')) {
-        const color = e.target.dataset.color;
+      if (target.classList.contains('color-block')) {
+        const color = target.dataset.color;
         if (color) {
           setSelectedColor(color);
           colorPaletteExample();
@@ -127,6 +262,24 @@ const Features = () => {
 
           <div class="p-6 space-y-6">
             <div class="flex justify-end space-x-2">
+              <button
+                onClick={defaultExample}
+                class="px-3 py-1 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors"
+              >
+                Default Example
+              </button>
+              <button
+                onClick={counterExample}
+                class="px-3 py-1 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors"
+              >
+                Counter Example
+              </button>
+              <button
+                onClick={colorPaletteExample}
+                class="px-3 py-1 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors"
+              >
+                Color Palette
+              </button>
               <button
                 onClick={() => setTheme(t => t === 'light' ? 'dark' : 'light')}
                 class="px-3 py-1 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition-colors"
@@ -162,24 +315,6 @@ const Features = () => {
                 Error: {error()}
               </div>
             </Show>
-
-            <div class="mt-4">
-              <h3 class="text-lg font-medium text-white mb-2">Interactive Examples:</h3>
-              <div class="space-y-2">
-                <button
-                  onClick={counterExample}
-                  class="block w-full text-left px-4 py-2 rounded-lg bg-gray-800/50 text-white hover:bg-gray-700/50 transition-colors"
-                >
-                  Interactive Counter
-                </button>
-                <button
-                  onClick={colorPaletteExample}
-                  class="block w-full text-left px-4 py-2 rounded-lg bg-gray-800/50 text-white hover:bg-gray-700/50 transition-colors"
-                >
-                  Interactive Color Palette
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
