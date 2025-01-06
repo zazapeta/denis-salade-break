@@ -23,25 +23,37 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
 1. **Clone and Install**
 
    ```bash
-   $ git clone https://github.com/Marve10s/UltimateAstroTemplate.git
+    git clone https://github.com/Marve10s/UltimateAstroTemplate.git
    ```
 
    ```bash
-   $ cd UltimateAstroTemplate
+    cd UltimateAstroTemplate
    ```
 
    ```bash
-   $ npm install
+    npm install
+   ```
+
+   **Or Fork and Install**
+
+   1. Click the 'Fork' button in the top right corner of this repository
+   2. Clone your forked repository
+   ```bash
+    git clone https://github.com/YOUR_USERNAME/UltimateAstroTemplate.git
+   ```
+   3. Navigate and install dependencies
+   ```bash
+    cd UltimateAstroTemplate && npm install
    ```
 
 2. **Development**
    ```bash
-   $ npm run dev
+    npm run dev
    ```
 
 3. **Build**
    ```bash
-   $ npm run build
+    npm run build
    ```
 
 ## 📁 Project Structure
@@ -94,17 +106,6 @@ Modify `tailwind.config.cjs` to customize:
 - Add framework-specific components in respective directories
 - Use shared components in `ui/` for cross-framework functionality
 - Leverage Astro's partial hydration with `client:*` directives
-
-
-## 👨‍💻 Author
-
-<img src="https://github.com/Marve10s.png" width="100" height="100" style="border-radius: 50%;" alt="Ibrahim Elkamali"/>
-
-**Ibrahim Elkamali**
-
-[![GitHub](https://img.shields.io/badge/GitHub-Marve10s-black?style=flat-square&logo=github)](https://github.com/Marve10s)
-[![Email](https://img.shields.io/badge/Email-igrimanigroman%40gmail.com-red?style=flat-square&logo=gmail)](mailto:igrimanigroman@gmail.com)
-[![Telegram](https://img.shields.io/badge/Telegram-TheCr1nge-blue?style=flat-square&logo=telegram)](https://t.me/TheCr1nge)
 
 
 ## 🎨 Share Your Creation
