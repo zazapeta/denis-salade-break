@@ -22,7 +22,7 @@
 
 <div align="center">
 
-[![PageSpeed Insights](https://img.shields.io/badge/PageSpeed%20Score-100-success?style=for-the-badge&logo=pagespeed-insights)](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
+[![PageSpeed Insights](https://img.shields.io/badge/PageSpeed%20Score-99-success?style=for-the-badge&logo=pagespeed-insights)](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
 
 </div>
 
@@ -109,15 +109,6 @@ Modify `tailwind.config.cjs` to customize:
 - Use shared components in `ui/` for cross-framework functionality
 - Leverage Astro's partial hydration with `client:*` directives
 
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 👨‍💻 Author
 
@@ -128,6 +119,22 @@ We welcome contributions! Here's how you can help:
 [![GitHub](https://img.shields.io/badge/GitHub-Marve10s-black?style=flat-square&logo=github)](https://github.com/Marve10s)
 [![Email](https://img.shields.io/badge/Email-igrimanigroman%40gmail.com-red?style=flat-square&logo=gmail)](mailto:igrimanigroman@gmail.com)
 [![Telegram](https://img.shields.io/badge/Telegram-TheCr1nge-blue?style=flat-square&logo=telegram)](https://t.me/TheCr1nge)
+
+
+All theme contributions will be reviewed and credited appropriately.
+
+## 🎨 Share Your Creation
+
+Have you modified my template? I'd love to see it! Share your creation with us:
+
+- Create a [GitHub issue](https://github.com/Marve10s/UltimateAstroTemplate/issues) with screenshots and demo link
+- Message me on [Telegram](https://t.me/TheCr1nge) with your project details
+
+### 🌟 Community Showcases
+
+Check out these amazing modifications by our community:
+
+*Your creation could be featured here! Share your work with me.*
 
 ## 📄 License
 
