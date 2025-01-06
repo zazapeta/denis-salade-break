@@ -90,7 +90,7 @@ const stars = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO_NA
                     <span class="text-[11px] lg:text-xs xl:text-sm">Most interesting is here!</span>
                     {stars > 0 && (
                         <span class="px-1.5 lg:px-2 py-0.5 text-[10px] lg:text-xs xl:text-sm bg-blue-500/20 rounded-full">
-                            {stars}
+                            {stars}let cleanup: (() => void) | undefined;
                         </span>
                     )}
                 </a>
@@ -193,39 +193,77 @@ const stars = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO_NA
         const menu = document.getElementById('mobile-menu');
         const body = document.body;
 
-        if (!button || !closeButton || !menu) return;
+        if (!button || !closeButton || !menu || !button.parentNode || !closeButton.parentNode) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
+
+        // Create new buttons with event listeners
+        const newButton = button.cloneNode(true) as HTMLButtonElement;
+        const newCloseButton = closeButton.cloneNode(true) as HTMLButtonElement;
 
         const toggleMenu = () => {
             menu.classList.toggle('hidden');
             body.style.overflow = menu.classList.contains('hidden') ? '' : 'hidden';
         };
-        
-        button.addEventListener('click', toggleMenu);
-        closeButton.addEventListener('click', toggleMenu);
+
+        // Add event listeners to new buttons
+        newButton.addEventListener('click', toggleMenu);
+        newCloseButton.addEventListener('click', toggleMenu);
+
+        // Replace old buttons with new ones
+        button.parentNode.replaceChild(newButton, button);
+        closeButton.parentNode.replaceChild(newCloseButton, closeButton);
 
         // Close menu when clicking outside
-        menu.addEventListener('click', (e) => {
-            if (e.target === menu) {
+        const handleOutsideClick = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            if (target === menu) {
                 toggleMenu();
             }
-        });
+        };
+        menu.addEventListener('click', handleOutsideClick);
 
         // Close menu on escape key
-        document.addEventListener('keydown', (e) => {
+        const handleEscKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
                 toggleMenu();
             }
-        });
+        };
+        document.addEventListener('keydown', handleEscKey);
+
+        // Cleanup function
+        return () => {
+            menu.removeEventListener('click', handleOutsideClick);
+            document.removeEventListener('keydown', handleEscKey);
+        };
     }
 
-    // Setup on initial load
-    setupMobileMenu();
+    let cleanup: (() => void) | undefined;
+
+    // Run setup immediately if document is already loaded
+    if (document.readyState === 'complete') {
+        cleanup = setupMobileMenu();
+    } else {
+        // Otherwise wait for DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            cleanup = setupMobileMenu();
+        });
+    }
     
-    // Setup after each navigation
-    document.addEventListener('astro:page-load', setupMobileMenu);
+    // Setup after each navigation with View Transitions
+    document.addEventListener('astro:page-load', () => {
+        if (cleanup) {
+            cleanup();
+        }
+        cleanup = setupMobileMenu();
+    });
     
     // Cleanup when leaving page
     document.addEventListener('astro:before-swap', () => {
+        if (cleanup) {
+            cleanup();
+        }
         const menu = document.getElementById('mobile-menu');
         const body = document.body;
         if (menu && !menu.classList.contains('hidden')) {
