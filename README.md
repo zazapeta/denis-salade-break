@@ -12,70 +12,41 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 
-[![GitHub stars](https://img.shields.io/github/stars/Marve10s/UltimateAstroTemplate?style=social)](https://github.com/Marve10s/UltimateAstroTemplate/stargazers)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-
-</div>
-
-## 📊 Performance
-
-<div align="center">
-
-[![PageSpeed Insights](https://img.shields.io/badge/PageSpeed%20Score-99-success?style=for-the-badge&logo=pagespeed-insights)](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
-
 </div>
 
 ## 🌟 Overview
 
 Ultimate Astro is a cutting-edge template that seamlessly integrates multiple frontend frameworks within the Astro ecosystem. Perfect for developers who want to experiment with different frameworks or build hybrid applications.
 
-### ✨ Key Features
-
-- 🎭 **Multi-Framework Support**
-  - React, Svelte, Vue, and Solid components in one project
-  - Framework-specific optimizations
-  - Isolated component development
-
-- 🎨 **Modern Design**
-  - TailwindCSS for utility-first styling
-  - Responsive layouts out of the box
-  - Dark mode support
-  
-- ⚡ **Performance First**
-  - Zero-JS by default with selective hydration
-  - Optimized asset loading
-  - Built-in image optimization
-
-- 🔄 **Developer Experience**
-  - Hot module replacement
-  - TypeScript support
-  - Automatic view transitions
-  - Component auto-imports
-
 ## 🚀 Quick Start
 
 1. **Clone and Install**
+
    ```bash
-   git clone https://github.com/Marve10s/UltimateAstroTemplate.git
-   cd UltimateAstroTemplate
-   npm install
+   $ git clone https://github.com/Marve10s/UltimateAstroTemplate.git
+   ```
+
+   ```bash
+   $ cd UltimateAstroTemplate
+   ```
+
+   ```bash
+   $ npm install
    ```
 
 2. **Development**
    ```bash
-   npm run dev
+   $ npm run dev
    ```
-   Visit `http://localhost:3000` to see your app
 
 3. **Build**
    ```bash
-   npm run build
+   $ npm run build
    ```
 
 ## 📁 Project Structure
 
-```bash
+```plaintext
 /
 ├── public/          # Static assets
 ├── src/
@@ -94,6 +65,21 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
 │   └── styles/      # Global styles
 └── package.json
 ```
+
+## 📊 Performance
+
+<div>
+
+[![PageSpeed Desktop](https://img.shields.io/badge/PageSpeed%20Desktop-99-success?style=for-the-badge&logo=pagespeed-insights)](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
+
+| Metric | Score |
+|--------|-------|
+| 🚀 Performance | 99/100 |
+| ♿ Accessibility | 97/100 |
+| 🏗️ Best Practices | 100/100 |
+| 🔍 SEO | 100/100 |
+
+</div>
 
 ## 🛠️ Customization
 
@@ -121,14 +107,14 @@ Modify `tailwind.config.cjs` to customize:
 [![Telegram](https://img.shields.io/badge/Telegram-TheCr1nge-blue?style=flat-square&logo=telegram)](https://t.me/TheCr1nge)
 
 
-All theme contributions will be reviewed and credited appropriately.
-
 ## 🎨 Share Your Creation
 
 Have you modified my template? I'd love to see it! Share your creation with us:
 
 - Create a [GitHub issue](https://github.com/Marve10s/UltimateAstroTemplate/issues) with screenshots and demo link
 - Message me on [Telegram](https://t.me/TheCr1nge) with your project details
+
+All theme contributions will be reviewed and credited appropriately.
 
 ### 🌟 Community Showcases
 
