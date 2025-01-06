@@ -37,7 +37,9 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
    **Or Fork and Install**
 
    1.1 Click the 'Fork' button in the top right corner of this repository
+
    1.2 Clone your forked repository
+   
    ```bash
     git clone https://github.com/YOUR_USERNAME/UltimateAstroTemplate.git
    ```
