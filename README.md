@@ -2,15 +2,11 @@
 
 <div align="center">
 
+[![Ultimate Astro](https://github.com/user-attachments/assets/19ceca2e-af6f-498a-b1e1-00f36718fc48)](https://ultimate-astro-template.vercel.app)
+
 ![Astro](https://astro.build/assets/press/astro-icon-light-gradient.svg)
 
 [![Available at](https://img.shields.io/badge/Available%20at-Astro%20Themes-purple?style=for-the-badge&link=https://astro.build/themes/details/ultimate-astro-theme-multiframework-heaven/)](https://astro.build/themes/details/ultimate-astro-theme-multiframework-heaven/)
-
-</div>
-
-<div align="center">
-
-[![Ultimate Astro](https://github.com/user-attachments/assets/19ceca2e-af6f-498a-b1e1-00f36718fc48)](https://ultimate-astro-template.vercel.app)
 
 [![Astro](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE)](https://astro.build)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org)
