@@ -8,9 +8,12 @@ import vue from "@astrojs/vue";
 import solidJs from "@astrojs/solid-js";
 import sitemap from "@astrojs/sitemap";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultimate-astro-template.vercel.app/",
+
   integrations: [
     tailwind({
       applyBaseStyles: true,
@@ -26,10 +29,13 @@ export default defineConfig({
     }),
     sitemap(),
   ],
-  output: "static",
+
+  output: "server",
+
   build: {
     inlineStylesheets: "auto",
   },
+
   vite: {
     optimizeDeps: {
       include: ["react", "react-dom", "solid-js"],
@@ -39,4 +45,10 @@ export default defineConfig({
       noExternal: ["@astrojs/*"],
     },
   },
+
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });
