@@ -15,7 +15,6 @@
     "@astrojs/solid-js": "^5.0.1",
     "@astrojs/svelte": "^7.0.3",
     "@astrojs/tailwind": "^5.1.4",
-    "@astrojs/vercel": "^8.0.1",
     "@astrojs/vue": "^5.0.4",
     "@babel/runtime": "^7.26.0",
     "@motionone/solid": "^10.16.4",
