@@ -2,6 +2,14 @@
 
 <div align="center">
 
+![Astro](https://astro.build/assets/press/astro-icon-light-gradient.svg)
+
+[![Available at](https://img.shields.io/badge/Available%20at-Astro%20Themes-purple?style=for-the-badge&link=https://astro.build/themes/details/ultimate-astro-theme-multiframework-heaven/)](https://astro.build/themes/details/ultimate-astro-theme-multiframework-heaven/)
+
+</div>
+
+<div align="center">
+
 [![Ultimate Astro](https://github.com/user-attachments/assets/19ceca2e-af6f-498a-b1e1-00f36718fc48)](https://ultimate-astro-template.vercel.app)
 
 [![Astro](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE)](https://astro.build)
@@ -39,16 +47,19 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
    1.1 Click the 'Fork' button in the top right corner of this repository
 
    1.2 Clone your forked repository
-   
+
    ```bash
     git clone https://github.com/YOUR_USERNAME/UltimateAstroTemplate.git
    ```
+
    1.3 Navigate and install dependencies
+
    ```bash
     cd UltimateAstroTemplate && npm install
    ```
 
 2. **Development**
+
    ```bash
     npm run dev
    ```
@@ -86,12 +97,12 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
 
 [![PageSpeed Desktop](https://img.shields.io/badge/PageSpeed%20Desktop-99-success?style=for-the-badge&logo=pagespeed-insights)](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
 
-| Metric | Score |
-|--------|-------|
-| 🚀 Performance | 99/100 |
-| ♿ Accessibility | 97/100 |
+| Metric            | Score   |
+| ----------------- | ------- |
+| 🚀 Performance    | 99/100  |
+| ♿ Accessibility  | 97/100  |
 | 🏗️ Best Practices | 100/100 |
-| 🔍 SEO | 100/100 |
+| 🔍 SEO            | 100/100 |
 
 [View Full Report](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
 
@@ -100,17 +111,19 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
 ## 🛠️ Customization
 
 ### Styling
+
 Modify `tailwind.config.cjs` to customize:
+
 - 🎨 Color schemes
 - 📱 Breakpoints
 - 🔤 Typography
 - 🎯 Custom utilities
 
 ### Components
+
 - Add framework-specific components in respective directories
 - Use shared components in `ui/` for cross-framework functionality
 - Leverage Astro's partial hydration with `client:*` directives
-
 
 ## 🎨 Share Your Creation
 
@@ -125,7 +138,7 @@ All theme contributions will be reviewed and credited appropriately.
 
 Check out these amazing modifications by our community:
 
-*Your creation could be featured here! Share your work with me.*
+_Your creation could be featured here! Share your work with me._
 
 ## 📄 License
 
