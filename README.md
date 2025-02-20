@@ -126,7 +126,6 @@ Modify `tailwind.config.cjs` to customize:
 Have you modified my template? I'd love to see it! Share your creation with me:
 
 - Create a [GitHub issue](https://github.com/Marve10s/UltimateAstroTemplate/issues) with screenshots and demo link
-- Message me on [Telegram](https://t.me/TheCr1nge) with your project details
 
 All theme contributions will be reviewed and credited appropriately.
 
@@ -134,7 +133,10 @@ All theme contributions will be reviewed and credited appropriately.
 
 Check out these amazing modifications by our community:
 
-_Your creation could be featured here! Share your work with me._
+[Ismael Treviño](https://github.com/Ismola) - Modified background to have different orb colors | Changes are live! ✅
+
+[Ismael Treviño](https://github.com/Ismola) - Added DevContainer | Changes are live! 🚀
+
 
 ## 📄 License
 
