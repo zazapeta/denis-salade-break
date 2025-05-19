@@ -91,7 +91,7 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
 
 <div>
 
-[![PageSpeed Desktop](https://img.shields.io/badge/PageSpeed%20Desktop-99-success?style=for-the-badge&logo=pagespeed-insights)](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
+[![PageSpeed Desktop](https://img.shields.io/badge/PageSpeed%20Desktop-99-success?style=for-the-badge&logo=pagespeed-insights)](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/2tzke5pokx?form_factor=desktop)
 
 | Metric            | Score   |
 | ----------------- | ------- |
@@ -100,7 +100,7 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
 | 🏗️ Best Practices | 100/100 |
 | 🔍 SEO            | 100/100 |
 
-[View Full Report](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/qj1mxysey7?form_factor=desktop)
+[View Full Report](https://pagespeed.web.dev/analysis/https-ultimate-astro-template-vercel-app/2tzke5pokx?form_factor=desktop)
 
 </div>
 
