@@ -65,6 +65,10 @@ Ultimate Astro is a cutting-edge template that seamlessly integrates multiple fr
     npm run build
    ```
 
+## ⭐ Star Power 
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Marve10s/UltimateAstroTemplate&type=Date)](https://www.star-history.com/#Marve10s/UltimateAstroTemplate&Date)
+
 ## 📁 Project Structure
 
 ```plaintext
