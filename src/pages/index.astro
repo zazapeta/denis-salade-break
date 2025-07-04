@@ -1,10 +1,410 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Astro/Hero.astro';
-import Frameworks from '../components/Astro/Frameworks.astro';
+// Thème (couleurs & typo)
+const brand = {
+  font: "font-sans",
+  // Couleurs textes
+  textGreen: "text-green-600",
+  textBlue: "text-sky-600",
+  textOrange: "text-amber-500",
+  // Couleurs fonds / hover / bordure
+  bgGreen: "bg-green-600",
+  bgGreenHover: "hover:bg-green-700",
+  bgOrange: "bg-amber-500",
+  borderGreen: "border-green-600",
+  // Divers
+  textHover: "hover:text-amber-200",
+  heroOverlay: "bg-green-900/40",
+};
+
+const juice = {
+  price: "6 €",
+  ml: "33 cl",
+};
+
+// Contenu — carte & infos
+const salads = [
+  { name: "Grande Salade (2 végétaux)", price: "9 €" },
+  { name: "Maxi Salade (3 végétaux)", price: "13 €" },
+];
+
+const extras = [
+  { name: "1 Protéine", price: "2 €" },
+  { name: "1 Végétal", price: "1,5 €" },
+];
+
+const formulas = [
+  { name: "Maxi Salade + Jus ou Dessert", price: "18 €" },
+  { name: "Maxi Salade + Jus + Dessert", price: "23 €" },
+];
+
+const midiFormula = {
+  details: ["Grande Salade", "Dessert", "Canette ou Eau"],
+  price: "14,5 €",
+};
+
+const juices = [
+  { name: "SUNNY", description: "Orange / banane" },
+  { name: "CURE V", description: "Orange / carotte / citron / gingembre" },
+  { name: "COLIBRI", description: "Pomme / concombre / citron / gingembre" },
+  { name: "VITAMIX", description: "Ananas / poire / citron vert" },
+  { name: "PAMENVERT", description: "Pastèque / menthe / citron vert" },
+  { name: "Jus du Marché", description: "" },
+];
+
+const drinks = [
+  { name: "Soda canette 33 cl", price: "2,5 €" },
+  {
+    name: "Soda local 33 cl (Landes cola, Landes tea, Landes limo)",
+    price: "3,5 €",
+  },
+  { name: "Bouteille d'eau 50 cl", price: "2 €" },
+  { name: "Café court / allongé", price: "2 €" },
+  { name: "Thé / infusion", price: "3 €" },
+];
+
+const desserts = [
+  {
+    name: "Salade de fruits",
+    description: "Fruits de saison infusés au gingembre frais & cannelle.",
+  },
+  {
+    name: "Tiramisu",
+    description:
+      "Crème de mascarpone, cacao et biscuit cuillère au café expresso.",
+  },
+  {
+    name: "Perles du Japon",
+    description:
+      "Cuites au lait de coco, coulis de fruits exotiques et fruits de saison.",
+  },
+  {
+    name: "Riz au lait",
+    description:
+      "Riz cuisson lente au lait de coco, caramel et éclats de noisettes caramélisées.",
+  },
+];
+
+const contact = {
+  address: ["5 Avenue Maurice Martin", "40130 Capbreton"],
+  telDisplay: "06 51 72 80 46",
+  telLink: "+33651728046",
+  insta: "https://www.instagram.com/salade_break",
+  gmap: "https://maps.app.goo.gl/mW6GTQAi6gT7t6xw5",
+};
 ---
 
-<Layout title="Astro">
-	<Hero />
-	<Frameworks />
-</Layout>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salade Break – Capbreton</title>
+    <style>
+      /* Construit un carrousel vertical de 4 mots (steps = 4) */
+      @keyframes slideWords {
+        to {
+          transform: translateY(-400%);
+        } /* 4 lignes = -400 % */
+      }
+      .word-slider {
+        animation: slideWords 8s steps(4) infinite;
+      }
+      .word-slider span {
+        display: block;
+      } /* chaque mot sur sa ligne */
+    </style>
+  </head>
+  <body class={`${brand.font} text-gray-800`}>
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <h1 class="text-2xl font-extrabold uppercase tracking-tight">
+          <span class={brand.textGreen}>Salade</span>
+          <span class={brand.textOrange}>Break</span>
+        </h1>
+        <!-- Navigation -->
+        <nav class="flex space-x-4">
+          <a
+            href="#menu"
+            class={`px-4 py-2 rounded-full ${brand.bgGreen} text-white font-semibold ${brand.bgGreenHover} transition`}
+            >Menu</a
+          >
+          <a
+            href={contact.gmap}
+            target="_blank"
+            rel="noopener"
+            class={`flex items-center p-2 rounded-full border-2 ${brand.borderGreen} ${brand.textOrange} font-semibold hover:bg-green-50 transition`}
+          >
+            <!-- Map Pin Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 8c0 7-7 13-7 13S5 15 5 8a7 7 0 1114 0z"></path>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="relative flex h-[70vh] items-center justify-center bg-[url(./miam.png)] bg-cover bg-center"
+    >
+      <div class={`absolute inset-0 ${brand.heroOverlay}`}></div>
+      <div class="relative z-10 text-center text-white">
+        <h2 class="mb-4">
+          <span class="mb-4 text-2xl font-bold italic"
+            >Fraîche &amp; sur-mesure,</span
+          >
+          <br />
+          <span class="text-3xl font-extrabold md:text-5xl"
+            >Composez votre MAXI salade !</span
+          >
+        </h2>
+
+        <p class="mt-4 text-lg md:text-xl">
+          Jus pressés minute • Gourmands • Options véganes
+        </p>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="bg-gray-50 py-16">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h3 class={`text-3xl font-bold text-center ${brand.textBlue} mb-12`}>
+          Notre Carte
+        </h3>
+
+        <!-- Salades & Extras -->
+        <div class="mb-12 grid gap-8 md:grid-cols-2">
+          <div>
+            <h4 class={`text-2xl font-semibold ${brand.textBlue} mb-4`}>
+              Salades
+            </h4>
+            <ul class="space-y-2">
+              {
+                salads.map(({ name, price }) => (
+                  <li class="flex justify-between border-b border-dotted border-gray-300 pb-1">
+                    <span>{name}</span>
+                    <span class="font-semibold text-gray-700">{price}</span>
+                  </li>
+                ))
+              }
+            </ul>
+            <h5 class="mb-2 mt-6 font-semibold text-lime-600">Extras</h5>
+            <ul class="space-y-2">
+              {
+                extras.map(({ name, price }) => (
+                  <li class="flex justify-between">
+                    <>
+                      <span>{name}</span>
+                      <span class="font-semibold">{price}</span>
+                    </>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <!-- Formules -->
+          <div class="rounded-xl border-l-4 border-lime-500 bg-lime-50 p-6">
+            <h4 class={`text-2xl font-semibold ${brand.textBlue} mb-4`}>
+              Formule Maxi
+            </h4>
+            <ul class="space-y-2">
+              {
+                formulas.map(({ name, price }) => (
+                  <li class="flex justify-between border-b border-dotted border-gray-300 pb-1 last:border-0">
+                    <span>{name}</span>
+                    <span class="font-semibold text-gray-700">{price}</span>
+                  </li>
+                ))
+              }
+            </ul>
+            <div class="mt-6 flex items-start gap-4">
+              <div class="font-bold uppercase text-green-700">
+                Midi<br />
+                <span class="font-normal normal-case text-gray-600">
+                  {
+                    midiFormula.details.map((d, i) => (
+                      <>
+                        {i > 0 && (
+                          <>
+                            +<br />
+                          </>
+                        )}{" "}
+                        {d}
+                      </>
+                    ))
+                  }
+                </span>
+              </div>
+              <span
+                class={`ml-auto px-4 py-2 rounded-full ${brand.bgOrange} text-white font-bold text-lg self-center`}
+                >{midiFormula.price}</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Jus & Boissons -->
+        <div class="mb-12 grid gap-8 md:grid-cols-2">
+          <!-- Jus -->
+          <div>
+            <h4 class={`text-2xl font-semibold ${brand.textBlue} mb-4`}>
+              Jus Frais
+              <span class={`text-xl ${brand.textGreen}`}> {juice.ml}</span>
+              <span
+                class={`px-2 py-1 rounded-full ${brand.bgOrange} text-white`}
+                >6 €</span
+              >
+            </h4>
+            <ul class="space-y-1 text-sm leading-relaxed">
+              {
+                juices.map(({ name, description }) => (
+                  <li>
+                    <span class="font-semibold">{name}</span>
+                    {description && ` : ${description}`}
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <!-- Boissons -->
+          <div>
+            <h4 class={`text-2xl font-semibold ${brand.textBlue} mb-4`}>
+              Boissons
+            </h4>
+            <ul class="space-y-2">
+              {
+                drinks.map(({ name, price }) => (
+                  <li class="flex justify-between border-b border-dotted border-gray-300 pb-1 last:border-0">
+                    <>
+                      <span>{name}</span>
+                      <span class="font-semibold">{price}</span>
+                    </>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="mx-auto max-w-3xl">
+          <h4
+            class={`text-2xl font-semibold ${brand.textBlue} mb-6 text-center`}
+          >
+            Desserts gourmands
+          </h4>
+          <p class="mb-8 text-center">
+            Tous les desserts sont à <span
+              class={`px-2 py-1 rounded-full ${brand.bgOrange} text-white self-center align-baseline top-[-15px]`}
+              >6 €</span
+            >
+          </p>
+          <ul class="space-y-6 text-sm leading-relaxed">
+            {
+              desserts.map(({ name, description }) => (
+                <li>
+                  <>
+                    <span class="font-semibold">{name}</span>
+                    <br />
+                  </>
+                  {description}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-16">
+      <div class="container mx-auto grid gap-8 px-6 text-center md:grid-cols-3">
+        <div>
+          <h5 class="mb-2 font-semibold uppercase text-gray-700">Adresse</h5>
+          {contact.address.map((line) => <p>{line}</p>)}
+        </div>
+        <div>
+          <h5 class="mb-2 font-semibold uppercase text-gray-700">Horaires</h5>
+          <p>Lundi – Dimanche<br />11:00 – 15:00 • 18:00 – 22:00</p>
+          <p class="mt-2 text-xs italic text-gray-500">
+            *Horaires susceptibles d’évoluer.
+          </p>
+        </div>
+        <div>
+          <h5 class="mb-2 font-semibold uppercase text-gray-700">Téléphone</h5>
+          <p>
+            <a
+              href={`tel:${contact.telLink}`}
+              class={`${brand.textGreen} hover:underline font-medium`}
+            >
+              {contact.telDisplay}
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class={`${brand.bgGreen} text-white`}>
+      <div
+        class="container mx-auto flex flex-col items-center justify-between gap-4 px-6 py-4 md:flex-row"
+      >
+        <!-- Phone -->
+        <a
+          href={`tel:${contact.telLink}`}
+          class={`flex items-center gap-2 ${brand.textHover}`}
+        >
+          <!-- Phone icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 5l1.671-1.671a2 2 0 012.829 0L9 4.828c.78.78.78 2.048 0 2.828l-.586.586a1 1 0 000 1.414l6.172 6.172a1 1 0 001.414 0l.586-.586c.78-.78 2.048-.78 2.828 0l1.5 1.5a2 2 0 010 2.828L19 21m-5.586-7.586L12 13"
+            ></path>
+          </svg>
+          {contact.telDisplay}
+        </a>
+        <!-- Instagram -->
+        <a
+          href={contact.insta}
+          target="_blank"
+          rel="noopener"
+          class={`underline ${brand.textHover}`}>Instagram</a
+        >
+        <!-- Google -->
+        <a
+          href={contact.gmap}
+          target="_blank"
+          rel="noopener"
+          class={`underline ${brand.textHover}`}>Page Google</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

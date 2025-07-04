@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salade Break – Capbreton</title>
+  </head>
+  <body class="font-sans text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo / Brand -->
+        <h1 class="text-2xl font-extrabold tracking-tight uppercase">
+          <span class="text-green-600">Salade</span>
+          <span class="text-amber-500">Break</span>
+        </h1>
+        <!-- Navigation -->
+        <nav class="flex space-x-4">
+          <a
+            href="#menu"
+            class="px-4 py-2 rounded-full bg-green-600 text-white font-semibold hover:bg-green-700 transition"
+          >
+            Menu
+          </a>
+          <a
+            href="https://maps.app.goo.gl/mW6GTQAi6gT7t6xw5"
+            target="_blank"
+            rel="noopener"
+            class="flex items-center px-4 py-2 rounded-full border-2 border-green-600 text-green-600 font-semibold hover:bg-green-50 transition"
+          >
+            <!-- Map Pin Icon (Heroicons) -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 8c0 7-7 13-7 13S5 15 5 8a7 7 0 1114 0z"></path>
+            </svg>
+            Google Maps
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="relative h-[70vh] flex items-center justify-center bg-cover bg-center bg-[url(./miam.png)]"
+    >
+      <div class="absolute inset-0 bg-green-800/40"></div>
+      <div class="relative z-10 text-center text-white max-w-lg px-6">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+          Composez votre salade<br />fraîche &amp; sur‑mesure
+        </h2>
+        <p class="text-lg md:text-xl">
+          Jus pressés minute • Bowls gourmands • Options végétariennes et
+          véganes
+        </p>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-10">Notre Carte</h3>
+
+        <!-- Salads -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h4 class="text-xl font-semibold mb-2">Salade Signature</h4>
+            <p class="mb-4 text-sm text-gray-600">
+              Mélange de jeunes pousses, poulet rôti, tomates cerises, avocat,
+              graines de tournesol &amp; sauce citronnée.
+            </p>
+            <span class="text-lg font-bold text-green-700">12,90&nbsp;€</span>
+          </div>
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h4 class="text-xl font-semibold mb-2">Bowl Veggie</h4>
+            <p class="mb-4 text-sm text-gray-600">
+              Quinoa, houmous, falafels maison, betterave, concombre, pickles
+              d’oignons &amp; tahini.
+            </p>
+            <span class="text-lg font-bold text-green-700">11,50&nbsp;€</span>
+          </div>
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h4 class="text-xl font-semibold mb-2">Caesar Poulet</h4>
+            <p class="mb-4 text-sm text-gray-600">
+              Romaine, poulet grillé, copeaux de parmesan, croûtons maison &amp;
+              sauce Caesar légère.
+            </p>
+            <span class="text-lg font-bold text-green-700">12,00&nbsp;€</span>
+          </div>
+        </div>
+
+        <!-- Juices -->
+        <h4 class="text-2xl font-bold mt-12 mb-6 text-center">
+          Jus &amp; Smoothies
+        </h4>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h5 class="text-lg font-semibold mb-2">Detox Vert</h5>
+            <p class="mb-4 text-sm text-gray-600">
+              Pomme, concombre, épinard, citron &amp; gingembre.
+            </p>
+            <span class="text-lg font-bold text-green-700">5,50&nbsp;€</span>
+          </div>
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h5 class="text-lg font-semibold mb-2">Boost Orange</h5>
+            <p class="mb-4 text-sm text-gray-600">
+              Carotte, orange, curcuma frais &amp; poivre noir.
+            </p>
+            <span class="text-lg font-bold text-green-700">5,50&nbsp;€</span>
+          </div>
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h5 class="text-lg font-semibold mb-2">Tropical Smoothie</h5>
+            <p class="mb-4 text-sm text-gray-600">
+              Mangue, ananas, passion &amp; lait de coco.
+            </p>
+            <span class="text-lg font-bold text-green-700">6,00&nbsp;€</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section class="py-16">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <h5 class="font-semibold uppercase mb-2 text-gray-700">Adresse</h5>
+          <p>5 Avenue Maurice Martin<br />40130 Capbreton</p>
+        </div>
+        <div>
+          <h5 class="font-semibold uppercase mb-2 text-gray-700">Horaires</h5>
+          <p>Lundi – Dimanche<br />11:00 – 15:00 &bull; 18:00 – 22:00</p>
+          <p class="text-xs italic text-gray-500 mt-2">
+            *Horaires susceptibles d’évoluer.
+          </p>
+        </div>
+        <div>
+          <h5 class="font-semibold uppercase mb-2 text-gray-700">Téléphone</h5>
+          <p>
+            <a
+              href="tel:+33651728046"
+              class="text-green-600 hover:underline font-medium"
+              >06&nbsp;51&nbsp;72&nbsp;80&nbsp;46</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white">
+      <div
+        class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <!-- Phone -->
+        <a
+          href="tel:+33651728046"
+          class="flex items-center gap-2 hover:text-amber-200"
+        >
+          <!-- Phone icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 5l1.671-1.671a2 2 0 012.829 0L9 4.828c.78.78.78 2.048 0 2.828l-.586.586a1 1 0 000 1.414l6.172 6.172a1 1 0 001.414 0l.586-.586c.78-.78 2.048-.78 2.828 0l1.5 1.5a2 2 0 010 2.828L19 21m-5.586-7.586L12 13"
+            ></path>
+          </svg>
+          06&nbsp;51&nbsp;72&nbsp;80&nbsp;46
+        </a>
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/salade_break"
+          target="_blank"
+          rel="noopener"
+          class="hover:text-amber-200 underline">Instagram</a
+        >
+        <!-- Google -->
+        <a
+          href="https://maps.app.goo.gl/mW6GTQAi6gT7t6xw5"
+          target="_blank"
+          rel="noopener"
+          class="hover:text-amber-200 underline">Page Google</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

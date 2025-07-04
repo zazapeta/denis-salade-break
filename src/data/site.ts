@@ -6,10 +6,10 @@ export const siteConfig = {
 };
 
 export const home = {
-  title: "One Template\nEvery Framework",
-  subtitle: "Ultimate Astro Template",
+  title: "Salade BREAK !",
+  subtitle: "L'ultime salade à Cap Breaton ! (au port)",
   description:
-    "Discover the power of multi-framework development with our ultimate Astro template. From React to Vue, Svelte to Solid - experience them all in one blazing-fast website.",
+    "Venez découvrir l'une des meilleures salade de Cap Breaton",
   features: [
     {
       title: "All Frameworks",
@@ -26,15 +26,15 @@ export const home = {
   ],
   stats: [
     {
-      value: "5+",
-      label: "Frameworks",
+      value: "ADRESSE",
+      label: "<a href='https://www.google.com/maps/place//data=!4m2!3m1!1s0xd515b4f20298d0f:0xc378d3140102e91f?sa=X&ved=1t:8290&ictx=111'> ICI </a>",
     },
     {
-      value: "10+",
+      value: "TELEPHONE",
       label: "Components",
     },
     {
-      value: "99",
+      value: "INSTAGRAM",
       label: "Performance Score",
     },
   ],
